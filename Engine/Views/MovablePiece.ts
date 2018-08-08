@@ -1,4 +1,4 @@
-import { Vector3, add } from '../vector-3';
+import { Vector3, add, isZero } from '../vector-3';
 import { View } from './View';
 
 export interface MovablePieceLocation {
@@ -31,7 +31,8 @@ export class MovablePieceView<Content extends View> {
     document.addEventListener('pointerdown', this.onDocumentPointerDown)
     document.addEventListener('pointermove', this.onDocumentPointerMove)
     document.addEventListener('pointerup', this.onDocumentPointerUp)
-
+    
+    this.updateZIndex()
     this.updateElementLocation(location)
   }
 
@@ -169,18 +170,22 @@ export class MovablePieceView<Content extends View> {
 
     this.showRotationHandle = true;
 
-    this.onLocationInput({
-      rotation: this.location.rotation,
-      position: add(
-        this.location.position,
-        {
-          x: event.pageX - this.dragStartEventLocation.x,
-          y: event.pageY - this.dragStartEventLocation.y,
-          z: 0
-        }
-      )
-    })
+    const increment = {
+      x: event.pageX - this.dragStartEventLocation.x,
+      y: event.pageY - this.dragStartEventLocation.y,
+      z: 0
+    }
 
+    if (!isZero(increment)) {
+      this.onLocationInput({
+        rotation: this.location.rotation,
+        position: add(
+          this.location.position,
+          increment
+        )
+      })  
+    }
+    
     this.dragStartEventLocation = null
     this.draggingInProgress = false
   }

@@ -20,3 +20,7 @@ export function subtract(a: Vector3, b: Vector3): Vector3 {
     z: a.z - b.z
   }
 }
+
+export function isZero(a: Vector3) {
+  return !a.x && !a.y && !a.z
+}

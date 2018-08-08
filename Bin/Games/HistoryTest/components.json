@@ -1,0 +1,65 @@
+{
+  "version": "1",
+  "sprites": {
+    "sprite_1": {
+      "x": 58,
+      "y": 0,
+      "width": 29,
+      "height": 29
+    },
+    "sprite_2": {
+      "x": 0,
+      "y": 0,
+      "width": 29,
+      "height": 29
+    },
+    "sprite_3": {
+      "x": 29,
+      "y": 0,
+      "width": 29,
+      "height": 29
+    },
+    "sprite_4": {
+      "x": 87,
+      "y": 0,
+      "width": 29,
+      "height": 29
+    }
+  },
+  "components": [
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "sprite_1"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 100,
+          "y": 100,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.2",
+      "sides": [
+        "sprite_1"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 360,
+          "y": 321,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    }
+  ]
+}

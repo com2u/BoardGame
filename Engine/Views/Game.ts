@@ -10,6 +10,8 @@ import { MovablePieceView, MovablePieceLocation } from './MovablePiece'
 import { MultiSidedSpriteView } from './MultiSidedSprite';
 import { PieceContainerView } from './PieceContainer';
 import { shuffle } from '../random-utils';
+import { GameStateContainer } from './GameStateStore';
+import { GameHistoryView } from './GameHistory';
 
 export type ComponentType = 'piece' | 'container'
 
@@ -41,7 +43,6 @@ export interface GameConfig {
   sprites: SpritesMap,
   components: BoardComponent[]
 }
-
 
 export interface GameConfigV1 {
   version: '1',
@@ -91,16 +92,17 @@ export class GameView {
         components: []
       },
       newConfig => {
-        this.destroyBoard()
-        this.gameState = newConfig
-        this.createBoard(newConfig)
+        this.gameConfig = newConfig
+        if (this.gameStateContainer != null) {
+          this.gameStateContainer.addState(newConfig.components, 'changed_in_json_editor')
+        }
       }
     )
 
     this.saveButton = new ButtonView(
       this.root,
       'Save',
-      () => downloadJsonFile(`${this.gameId}.json`, JSON.stringify(this.gameState, null, 2))
+      () => downloadJsonFile(`${this.gameId}.json`, JSON.stringify(this.gameConfig, null, 2))
     )
 
     this
@@ -117,12 +119,36 @@ export class GameView {
         } else {
           throw new Error('Unsupported game config loaded')
         }
-
-        this.gameState = gameConfig
-        this.JSONView.setValue(gameConfig)
-        this.createBoard(gameConfig)
+        
+        this.gameConfig = gameConfig
+        this.gameStateContainer = new GameStateContainer(gameConfig.components)
+        this.gameStateContainer.state.map(components => {
+          this.updateComponentPositions(components)
+          if (this.gameConfig != null) {
+            this.JSONView.setValue({
+              ...this.gameConfig,
+              components
+            })
+          }
+        })
       })
   }
+
+  private updateComponentPositions(components: BoardComponent[]) {
+    if (this.gameConfig == null) {
+      return
+    }
+    const newConfig = {
+      ...this.gameConfig,
+      components
+    }
+    this.JSONView.setValue(newConfig)
+    this.destroyBoard()
+    this.createBoard(newConfig)
+    this.updateItemsAssignedToContainers()
+  }
+
+  private gameStateContainer: GameStateContainer | null = null
 
   private pieces: MovablePieceView<MultiSidedSpriteView<PieceComponent>>[] = []
 
@@ -140,46 +166,67 @@ export class GameView {
 
   private JSONView: JSONView<GameConfig>
 
-  private gameState: GameConfig | null = null
+  private historyView?: GameHistoryView
+
+  private gameConfig: GameConfig | null = null
 
   private createBoard(config: GameConfig) {
+    if (this.gameStateContainer == null) {
+      return
+    }
+
     const componentsSpriteSheet = `Games/${this.gameId}/components.png`
 
     this.background = document.createElement('img')
     this.background.src = `Games/${this.gameId}/board.png`
     this.background.setAttribute('draggable', 'false')
     this.board.appendChild(this.background)
-
+    
+    this.historyView = new GameHistoryView(this.gameStateContainer)
+    this.root.appendChild(this.historyView.element)
     const sprites =
       config
         .components
         .filter(component => component.type == 'piece')
         .map((c, index) => {
-          const component = c as PieceComponent
+          const piece = c as PieceComponent
           const sprite = new MultiSidedSpriteView(
             this.board,
-            component,
+            piece,
             config.sprites,
             componentsSpriteSheet,
-            component.sides,
-            component.currentSide,
+            piece.sides,
+            piece.currentSide,
             () => {
-              const newSide = (component.currentSide + 1) % component.sides.length
-              component.currentSide = newSide
-              this.updateJSONView()
-              sprite.currentSide = newSide
+              const newCurrentSide = (piece.currentSide + 1) % piece.sides.length
+
+              if (piece.currentSide !== newCurrentSide && this.gameStateContainer != null) {
+                const newState = this.gameStateContainer.state.get().map(c => {
+                  if (c === piece) {
+                    return {
+                      ...piece,
+                      currentSide: newCurrentSide
+                    }
+                  } else {
+                    return c
+                  }
+                })
+                this.gameStateContainer.addState(
+                  newState,
+                  'flip_piece'
+                )
+              }
             }
           )
-          const piece = new MovablePieceView(
+          const pieceView = new MovablePieceView(
             this.board,
-            `[${index}] ${component.name}`,
-            component.location,
+            `[${index}] ${piece.name}`,
+            piece.location,
             sprite,
             newLocation => {
-              component.location = newLocation
-              this.updateJSONView()
-              piece.setLocation(newLocation)
-              this.updateItemsAssignedToContainers()
+              if (this.gameStateContainer != null) {
+                this.gameStateContainer.movePiece(piece, newLocation)
+              }
             },
             piece => {
               this.currentActorLabel.innerHTML = `Current component - ${piece.name}`
@@ -188,7 +235,7 @@ export class GameView {
             1
           )
 
-          return piece
+          return pieceView
         })
     
     const pieceContainers =
@@ -216,10 +263,9 @@ export class GameView {
                 () => this.resetPieces(piece)
               ),
               newLocation => {
-                container.location = newLocation
-                this.updateJSONView()
-                piece.setLocation(newLocation)
-                this.updateItemsAssignedToContainers()
+                if (this.gameStateContainer != null) {
+                  this.gameStateContainer.movePiece(container, newLocation)
+                }
               },
               () => {}
             )
@@ -229,12 +275,6 @@ export class GameView {
     
     this.containers.push(...pieceContainers)
     this.pieces.push(...sprites)
-  }
-
-  private updateJSONView() {
-    if (this.gameState != null) {
-      this.JSONView.setValue(this.gameState)
-    }
   }
 
   private containerToPieceMap = new Map<MovablePieceView<PieceContainerView>, MovablePieceView<MultiSidedSpriteView<PieceComponent>>[]>()
@@ -269,10 +309,10 @@ export class GameView {
   }
 
   private pieceBelongsToContainer(container: PieceContainerComponent, piece: PieceComponent) {
-    if (this.gameState == null) {
+    if (this.gameConfig == null) {
       throw new Error('Game state is not initialized')
     }
-    const containerSprite = this.gameState.sprites[container.backgroundSprite]
+    const containerSprite = this.gameConfig.sprites[container.backgroundSprite]
     const position = piece.location.position
 
     return (
@@ -284,37 +324,73 @@ export class GameView {
   }
 
   private resetPieces(container: MovablePieceView<PieceContainerView>) {
-    this.pieces.forEach(piece => {
-      if (piece.content.renderedObject.category === container.content.containerComponent.category) {
+    if (this.gameStateContainer == null) {
+      return
+    }
+
+    const newState = this.gameStateContainer.state.get().map(c => {
+      if (c.category === container.content.containerComponent.category) {
         const newLocation: MovablePieceLocation = {
           rotation: container.location.rotation,
           position: {
             ...container.location.position,
-            z: Math.max(piece.content.renderedObject.location.position.z, container.location.position.z + 1)
+            z: Math.max(c.location.position.z, container.location.position.z + 1)
           }
         }
-        piece.content.renderedObject.location = newLocation
-        piece.setLocation(newLocation)
+        return {
+          ...c,
+          location: newLocation
+        }
+      } else {
+        return c
       }
     })
-    this.updateItemsAssignedToContainers()
-    this.updateJSONView()
+
+    this.gameStateContainer.addState(newState, 'move_pieces_to_container')
   }
 
   private shufflePieces(container: MovablePieceView<PieceContainerView>) {
+    if (this.gameStateContainer == null) {
+      return
+    }
+
     const items = this.containerToPieceMap.get(container)
+
     if (items == null) {
       throw new Error('Items were not assigned to the container')
     }
-    shuffle(items).forEach((item, index) => item.setLocation({
-      rotation: item.location.rotation,
-      position: {
-        ...item.location.position,
-        z: index + container.location.position.z + 1
+
+    const shuffled = shuffle(items)
+    const map = shuffled.reduce((map, item, index) => {
+      map.set(item.content.renderedObject, index)
+      return map
+    }, new Map<BoardComponent, number>())
+    const newState = this.gameStateContainer.state.get().map(c => {
+      const shuffledItemIndex = map.get(c)
+      if (shuffledItemIndex == null) {
+        return c
       }
-    }))
-    this.updateJSONView()
-    this.updateItemsAssignedToContainers()
+      return {
+        ...c,
+        location: {
+          ...c.location,
+          position: {
+            ...c.location.position,
+            z: shuffledItemIndex + container.location.position.z + 1
+          }
+        }
+      }
+    })
+    this.gameStateContainer.addState(newState, 'shuffle_pieces')
+    // shuffled.forEach((item, index) => item.setLocation({
+    //   rotation: item.location.rotation,
+    //   position: {
+    //     ...item.location.position,
+    //     z: index + container.location.position.z + 1
+    //   }
+    // }))
+    // this.updateJSONView()
+    // this.updateItemsAssignedToContainers()
   }
 
   public bringToTop(piece: MovablePieceView<MultiSidedSpriteView<PieceComponent>>) {
@@ -363,6 +439,10 @@ export class GameView {
   private destroyBoard() {
     if (this.background != null) {
       this.board.removeChild(this.background)
+    }
+    if (this.historyView != null) {
+      this.root.removeChild(this.historyView.element)
+      this.historyView.destroy()
     }
     // this.root.removeChild(this.board)
     this.pieces.forEach(element => element.destroy())

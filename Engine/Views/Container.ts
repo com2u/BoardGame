@@ -5,9 +5,24 @@ export class ContainerView<Content extends { [key: string]: View }> implements V
   constructor(
     private root: HTMLElement | null,
     private _content: Content,
-    private className: string | null = null
+    private className: string | null = null,
+    private eventListeners?: {
+      [K in keyof HTMLElementEventMap]?: (this: HTMLDivElement, ev: HTMLElementEventMap[K]) => any
+    }
   ) {
     this.container = createElement('div', ['container-view', className])
+
+    if (this.eventListeners != null) {
+      Object
+        .keys(this.eventListeners)
+        .forEach(
+          eventName => this.container.addEventListener(
+            eventName,
+            (this.eventListeners as any)[eventName]
+          )
+        )
+    }
+
     Object.keys(_content).forEach(key => {
       this.container.appendChild(_content[key].element)
     })
@@ -27,6 +42,16 @@ export class ContainerView<Content extends { [key: string]: View }> implements V
   }
 
   public destroy() {
+    if (this.eventListeners != null) {
+      Object
+        .keys(this.eventListeners)
+        .forEach(
+          eventName => this.container.removeEventListener(
+            eventName,
+            (this.eventListeners as any)[eventName]
+          )
+        )
+    }
     Object.keys(this._content).forEach(key => {
       this.container.removeChild(this._content[key].element)
       this._content[key].destroy()

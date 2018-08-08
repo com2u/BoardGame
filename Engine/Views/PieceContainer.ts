@@ -27,7 +27,11 @@ export class PieceContainerView implements View {
       reset: new ButtonView(null, 'reset', () => this.onReset()),
       shuffle: new ButtonView(null, 'shuffle', () => this.onShuffle())
     },
-    'piece-container-view__controls'
+    'piece-container-view__controls',
+    {
+      pointerdown: e => e.stopPropagation(),
+      pointerup: e => e.stopPropagation()
+    }
   )
 
   private container = new ContainerView(
