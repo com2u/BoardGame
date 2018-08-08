@@ -1,0 +1,4 @@
+/node_modules/
+/dist/
+# /Bin/node.exe
+Bin/board-game.zip
