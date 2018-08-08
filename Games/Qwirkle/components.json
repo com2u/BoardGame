@@ -1,0 +1,916 @@
+{
+  "version": "1",
+  "sprites": {
+    "tiles_container": {
+      "x": 81,
+      "y": 240,
+      "width": 44,
+      "height": 44
+    },
+    "back": {
+      "x": 40,
+      "y": 240,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_Y1": {
+      "x": 0,
+      "y": 0,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_Y2": {
+      "x": 40,
+      "y": 0,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_Y3": {
+      "x": 80,
+      "y": 0,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_Y4": {
+      "x": 120,
+      "y": 0,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_Y5": {
+      "x": 160,
+      "y": 0,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_Y6": {
+      "x": 200,
+      "y": 0,
+      "width": 40,
+      "height": 40
+    },
+	
+	
+	"sprite_O1": {
+      "x": 0,
+      "y": 40,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_O2": {
+      "x": 40,
+      "y": 40,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_O3": {
+      "x": 80,
+      "y": 40,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_O4": {
+      "x": 120,
+      "y": 40,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_O5": {
+      "x": 160,
+      "y": 40,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_O6": {
+      "x": 200,
+      "y": 40,
+      "width": 40,
+      "height": 40
+    },
+	
+		
+	"sprite_R1": {
+      "x": 0,
+      "y": 80,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_R2": {
+      "x": 40,
+      "y": 80,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_R3": {
+      "x": 80,
+      "y": 80,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_R4": {
+      "x": 120,
+      "y": 80,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_R5": {
+      "x": 160,
+      "y": 80,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_R6": {
+      "x": 200,
+      "y": 80,
+      "width": 40,
+      "height": 40
+    },
+	
+		
+	
+		
+	"sprite_F1": {
+      "x": 0,
+      "y": 120,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_F2": {
+      "x": 40,
+      "y": 120,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_F3": {
+      "x": 80,
+      "y": 120,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_F4": {
+      "x": 120,
+      "y": 120,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_F5": {
+      "x": 160,
+      "y": 120,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_F6": {
+      "x": 200,
+      "y": 120,
+      "width": 40,
+      "height": 40
+    },
+	
+	
+		
+	"sprite_B1": {
+      "x": 0,
+      "y": 160,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_B2": {
+      "x": 40,
+      "y": 160,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_B3": {
+      "x": 80,
+      "y": 160,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_B4": {
+      "x": 120,
+      "y": 160,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_B5": {
+      "x": 160,
+      "y": 160,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_B6": {
+      "x": 200,
+      "y": 160,
+      "width": 40,
+      "height": 40
+    },
+	
+	"sprite_G1": {
+      "x": 0,
+      "y": 200,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_G2": {
+      "x": 40,
+      "y": 200,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_G3": {
+      "x": 80,
+      "y": 200,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_G4": {
+      "x": 120,
+      "y": 200,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_G5": {
+      "x": 160,
+      "y": 200,
+      "width": 40,
+      "height": 40
+    },
+	"sprite_G6": {
+      "x": 200,
+      "y": 200,
+      "width": 40,
+      "height": 40
+    }
+	
+	
+  },
+  "components": [
+  {
+      "type": "container",
+      "category": "tile",
+      "name": "Tiles Container",
+      "location": {
+        "position": {
+          "x": 22,
+          "y": 22,
+          "z": 0
+        },
+        "rotation": 0
+      },
+      "backgroundSprite": "tiles_container"
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_Y1"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_Y2"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_Y3"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_Y4"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_Y5"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_Y6"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_O1"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_O2"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_O3"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_O4"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_O5"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_O6"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_R1"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_R2"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_R3"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_R4"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_R5"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_R6"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_F1"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_F2"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_F3"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_F4"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_F5"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_F6"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_B1"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_B2"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_B3"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_B4"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_B5"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_B6"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_G1"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_G2"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_G3"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_G4"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_G5"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "back",
+		"sprite_G6"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    }
+	
+  ]
+}

@@ -1,0 +1,306 @@
+{
+  "version": "1",
+  "sprites": {
+    "sprite_1": {
+      "x": 58,
+      "y": 0,
+      "width": 29,
+      "height": 29
+    },
+    "sprite_2": {
+      "x": 0,
+      "y": 0,
+      "width": 29,
+      "height": 29
+    },
+    "sprite_3": {
+      "x": 29,
+      "y": 0,
+      "width": 29,
+      "height": 29
+    },
+    "sprite_4": {
+      "x": 87,
+      "y": 0,
+      "width": 29,
+      "height": 29
+    }
+  },
+  "components": [
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "sprite_1",
+		"sprite_2",
+		"sprite_3",
+		"sprite_4"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 326,
+          "y": 321,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.2",
+      "sides": [
+        "sprite_1"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 360,
+          "y": 321,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.3",
+      "sides": [
+        "sprite_1"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 326,
+          "y": 355,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.4",
+      "sides": [
+        "sprite_1"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 360,
+          "y": 355,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player2.1",
+      "sides": [
+        "sprite_2"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 22,
+          "y": 321,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player2.2",
+      "sides": [
+        "sprite_2"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 57,
+          "y": 321,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player2.3",
+      "sides": [
+        "sprite_2"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 22,
+          "y": 355,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player2.4",
+      "sides": [
+        "sprite_2"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 56,
+          "y": 355,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player3.1",
+      "sides": [
+        "sprite_3"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 22,
+          "y": 17,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player3.2",
+      "sides": [
+        "sprite_3"
+      ],
+      "currentSide": 0,
+      "location": {
+        "rotation": 0,
+        "position": {
+          "x": 56,
+          "y": 17,
+          "z": 0
+        }
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player3.3",
+      "sides": [
+        "sprite_3"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 22,
+          "y": 51,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player3.4",
+      "sides": [
+        "sprite_3"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 56,
+          "y": 51,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player4.1",
+      "sides": [
+        "sprite_4"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 326,
+          "y": 17,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player4.2",
+      "sides": [
+        "sprite_4"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 360,
+          "y": 17,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player4.3",
+      "sides": [
+        "sprite_4"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 326,
+          "y": 51,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player4.4",
+      "sides": [
+        "sprite_4"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 360,
+          "y": 51,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    }
+  ]
+}

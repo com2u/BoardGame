@@ -1,0 +1,359 @@
+{
+  "version": "1",
+  "sprites": {
+    "black": {
+      "x": 0,
+      "y": 0,
+      "width": 59,
+      "height": 62
+    },
+    "white": {
+      "x": 60,
+      "y": 0,
+      "width": 59,
+      "height": 62
+    }
+  },
+  "components": [
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "black"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 400,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "white"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 450,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "black"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 400,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "white"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 450,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "black"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 400,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "white"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 450,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "black"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 400,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "white"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 450,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "black"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 400,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "white"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 450,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "black"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 400,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "white"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 450,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "black"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 400,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "white"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 450,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "black"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 400,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "white"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 450,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "black"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 400,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "white"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 450,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "black"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 400,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "white"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 450,
+          "y": 450,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    }
+  ]
+}

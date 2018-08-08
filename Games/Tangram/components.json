@@ -1,0 +1,168 @@
+{
+  "version": "2",
+  "sprites": {
+    "sprite_1": {
+      "x": 15,
+      "y": 0,
+      "width": 406,
+      "height": 205
+    },
+    "sprite_2": {
+      "x": 7,
+      "y": 214,
+      "width": 94,
+      "height": 188
+    },
+    "sprite_3": {
+      "x": 116,
+      "y": 214,
+      "width": 295,
+      "height": 101
+    },
+    "sprite_4": {
+      "x": 218,
+      "y": 321,
+      "width": 195,
+      "height": 97
+    },
+    "sprite_5": {
+      "x": 430,
+      "y": 7,
+      "width": 200,
+      "height": 197
+    },
+    "sprite_6": {
+      "x": 449,
+      "y": 208,
+      "width": 202,
+      "height": 202
+    },
+    "sprite_7": {
+      "x": 663,
+      "y": 1,
+      "width": 205,
+      "height": 405
+    }
+  },
+  "components": [
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "sprite_1"
+      ],
+      "currentSide": 0,
+      "location": {
+        "rotation": 0,
+        "position": {
+          "x": 444.60003662109375,
+          "y": 242.1999969482422,
+          "z": 0
+        }
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "sprite_2"
+      ],
+      "currentSide": 0,
+      "location": {
+        "rotation": 0,
+        "position": {
+          "x": 603.0000381469727,
+          "y": 245.20001220703125,
+          "z": 0
+        }
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "sprite_3"
+      ],
+      "currentSide": 0,
+      "location": {
+        "rotation": 0,
+        "position": {
+          "x": 395.20001220703125,
+          "y": 499.8000946044922,
+          "z": 0
+        }
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "sprite_4"
+      ],
+      "currentSide": 0,
+      "location": {
+        "rotation": 0,
+        "position": {
+          "x": 446.00001525878906,
+          "y": 397.80006408691406,
+          "z": 0
+        }
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "sprite_5"
+      ],
+      "currentSide": 0,
+      "location": {
+        "rotation": 0,
+        "position": {
+          "x": 553.5999221801758,
+          "y": 450.9999542236328,
+          "z": 0
+        }
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "sprite_6"
+      ],
+      "currentSide": 0,
+      "location": {
+        "rotation": 0,
+        "position": {
+          "x": 549.8000030517578,
+          "y": 343.3999938964844,
+          "z": 0
+        }
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "sprite_7"
+      ],
+      "currentSide": 0,
+      "location": {
+        "rotation": 0,
+        "position": {
+          "x": 341.40001678466797,
+          "y": 351.0000305175781,
+          "z": 0
+        }
+      }
+    }
+  ]
+}

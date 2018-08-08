@@ -1,0 +1,844 @@
+{
+  "Components": [
+    {
+      "name": "Player1.1",
+      "source": {
+        "x": 0,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player1.1",
+      "source": {
+        "x": 0,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player1.1",
+      "source": {
+        "x": 0,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player1.1",
+      "source": {
+        "x": 0,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player1.1",
+      "source": {
+        "x": 0,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player1.1",
+      "source": {
+        "x": 0,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player1.1",
+      "source": {
+        "x": 0,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player1.1",
+      "source": {
+        "x": 0,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player1.1",
+      "source": {
+        "x": 0,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player1.1",
+      "source": {
+        "x": 0,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player1.5",
+      "source": {
+        "x": 0,
+        "y": 29,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 29,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player1.10",
+      "source": {
+        "x": 0,
+        "y": 58,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 58,
+        "y": 600,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.1",
+      "source": {
+        "x": 29,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.1",
+      "source": {
+        "x": 29,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.1",
+      "source": {
+        "x": 29,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.1",
+      "source": {
+        "x": 29,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.1",
+      "source": {
+        "x": 29,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.1",
+      "source": {
+        "x": 29,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.1",
+      "source": {
+        "x": 29,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.1",
+      "source": {
+        "x": 29,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.1",
+      "source": {
+        "x": 29,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.1",
+      "source": {
+        "x": 29,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.5",
+      "source": {
+        "x": 29,
+        "y": 29,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 29,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2.10",
+      "source": {
+        "x": 29,
+        "y": 58,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 58,
+        "y": 650,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.1",
+      "source": {
+        "x": 58,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.1",
+      "source": {
+        "x": 58,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.1",
+      "source": {
+        "x": 58,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.1",
+      "source": {
+        "x": 58,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.1",
+      "source": {
+        "x": 58,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.1",
+      "source": {
+        "x": 58,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.1",
+      "source": {
+        "x": 58,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.1",
+      "source": {
+        "x": 58,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.1",
+      "source": {
+        "x": 58,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.1",
+      "source": {
+        "x": 58,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.5",
+      "source": {
+        "x": 58,
+        "y": 29,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 29,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3.10",
+      "source": {
+        "x": 58,
+        "y": 58,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 58,
+        "y": 700,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.1",
+      "source": {
+        "x": 87,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.1",
+      "source": {
+        "x": 87,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.1",
+      "source": {
+        "x": 87,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.1",
+      "source": {
+        "x": 87,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.1",
+      "source": {
+        "x": 87,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.1",
+      "source": {
+        "x": 87,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.1",
+      "source": {
+        "x": 87,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.1",
+      "source": {
+        "x": 87,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.1",
+      "source": {
+        "x": 87,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.1",
+      "source": {
+        "x": 87,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.5",
+      "source": {
+        "x": 87,
+        "y": 29,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 29,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4.10",
+      "source": {
+        "x": 87,
+        "y": 58,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 58,
+        "y": 750,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.1",
+      "source": {
+        "x": 116,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 800,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.1",
+      "source": {
+        "x": 116,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 800,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.1",
+      "source": {
+        "x": 116,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 800,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.1",
+      "source": {
+        "x": 116,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 800,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.1",
+      "source": {
+        "x": 116,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 800,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.1",
+      "source": {
+        "x": 116,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 800,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.1",
+      "source": {
+        "x": 116,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 800,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.1",
+      "source": {
+        "x": 116,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 800,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.1",
+      "source": {
+        "x": 116,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 800,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.1",
+      "source": {
+        "x": 116,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 800,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.5",
+      "source": {
+        "x": 116,
+        "y": 29,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 29,
+        "y": 800,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5.10",
+      "source": {
+        "x": 116,
+        "y": 58,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 58,
+        "y": 800,
+        "rotation": 0
+      }
+    }
+  ]
+}

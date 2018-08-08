@@ -1,0 +1,30 @@
+{
+  "version": "1",
+  "sprites": {
+    "sprite_1": {
+      "x": 0,
+      "y": 0,
+      "width": 29,
+      "height": 29
+    }
+  },
+  "components": [
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "sprite_1"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    }
+  ]
+}

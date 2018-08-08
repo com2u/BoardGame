@@ -1,0 +1,165 @@
+{
+  "version": "1",
+  "sprites": {
+    "Dice1": {
+      "x": 0,
+      "y": 0,
+      "width": 75,
+      "height": 75
+    },
+	"Dice2": {
+      "x": 77,
+      "y": 0,
+      "width": 75,
+      "height": 75
+    },
+	"Dice3": {
+      "x": 152,
+      "y": 0,
+      "width": 75,
+      "height": 75
+    },
+	"Dice4": {
+      "x": 232,
+      "y": 0,
+      "width": 75,
+      "height": 75
+    },
+	"Dice5": {
+      "x": 308,
+      "y": 0,
+      "width": 75,
+      "height": 75
+    },
+	"Dice6": {
+      "x": 385,
+      "y": 0,
+      "width": 75,
+      "height": 75
+    },
+	"box": {
+      "x": 471,
+      "y": 0,
+      "width": 139,
+      "height": 164
+    }
+  },
+  "components": [
+    {
+      "type": "container",
+      "category": "tile",
+      "name": "Tiles Container",
+      "location": {
+        "position": {
+          "x": 130,
+          "y": 120,
+          "z": 0
+        },
+        "rotation": 0
+      },
+      "backgroundSprite": "box"
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "Dice1"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 80,
+          "y": 80,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "Dice2"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+           "x": 80,
+          "y": 80,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "Dice3"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+              "x": 80,
+          "y": 80,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "Dice4"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+               "x": 80,
+          "y": 80,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "Dice5"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+             "x": 80,
+          "y": 80,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "Dice6"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+              "x": 80,
+          "y": 80,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    }
+  ]
+}

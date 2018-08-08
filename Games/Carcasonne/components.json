@@ -1,0 +1,2251 @@
+{
+  "version": "1",
+  "sprites": {
+    "tiles_container": {
+      "x": 530,
+      "y": 125,
+      "width": 107,
+      "height": 107
+    },
+    "tile_back_side": {
+      "x": 538,
+      "y": 15,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_1": {
+      "x": 16,
+      "y": 15,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_2": {
+      "x": 121,
+      "y": 15,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_3": {
+      "x": 226,
+      "y": 15,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_4": {
+      "x": 331,
+      "y": 15,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_5": {
+      "x": 436,
+      "y": 15,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_6": {
+      "x": 16,
+      "y": 133,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_7": {
+      "x": 121,
+      "y": 133,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_8": {
+      "x": 226,
+      "y": 133,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_9": {
+      "x": 331,
+      "y": 133,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_10": {
+      "x": 436,
+      "y": 133,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_11": {
+      "x": 16,
+      "y": 250,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_12": {
+      "x": 121,
+      "y": 250,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_13": {
+      "x": 226,
+      "y": 250,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_14": {
+      "x": 331,
+      "y": 250,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_15": {
+      "x": 436,
+      "y": 250,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_16": {
+      "x": 16,
+      "y": 369,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_17": {
+      "x": 121,
+      "y": 369,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_18": {
+      "x": 226,
+      "y": 369,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_19": {
+      "x": 331,
+      "y": 369,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_20": {
+      "x": 436,
+      "y": 369,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_21": {
+      "x": 16,
+      "y": 487,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_22": {
+      "x": 121,
+      "y": 487,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_23": {
+      "x": 226,
+      "y": 487,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_24": {
+      "x": 331,
+      "y": 487,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_25": {
+      "x": 436,
+      "y": 487,
+      "width": 90,
+      "height": 87
+    },
+    "sprite_26": {
+      "x": 0,
+      "y": 600,
+      "width": 35,
+      "height": 35
+    },
+    "sprite_27": {
+      "x": 36,
+      "y": 600,
+      "width": 35,
+      "height": 35
+    },
+    "sprite_28": {
+      "x": 72,
+      "y": 600,
+      "width": 35,
+      "height": 35
+    },
+    "sprite_29": {
+      "x": 108,
+      "y": 600,
+      "width": 35,
+      "height": 35
+    },
+    "sprite_30": {
+      "x": 144,
+      "y": 600,
+      "width": 35,
+      "height": 35
+    }
+  },
+  "components": [
+    {
+      "type": "container",
+      "category": "tile",
+      "name": "Tiles Container",
+      "location": {
+        "position": {
+          "x": 55,
+          "y": 55,
+          "z": 0
+        },
+        "rotation": 0
+      },
+      "backgroundSprite": "tiles_container"
+    },
+    
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile11",
+      "sides": [
+	    "tile_back_side",
+        "sprite_1"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    
+	
+	
+	
+	{
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile11",
+      "sides": [
+        "tile_back_side",
+        "sprite_1"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile11",
+      "sides": [
+        "tile_back_side",
+        "sprite_1"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile11",
+      "sides": [     "tile_back_side",
+        "tile_back_side",
+        "sprite_1"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile21",
+      "sides": [     "tile_back_side",
+        "sprite_2"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile21",
+      "sides": [     "tile_back_side",
+        "sprite_2"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile31",
+      "sides": [     "tile_back_side",
+        "sprite_3"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile41",
+      "sides": [     "tile_back_side",
+        "sprite_4"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile41",
+      "sides": [     "tile_back_side",
+        "sprite_4"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile41",
+      "sides": [     "tile_back_side",
+        "sprite_4"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile51",
+      "sides": [     "tile_back_side",
+        "sprite_5"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile12",
+      "sides": [     "tile_back_side",
+        "sprite_6"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile22",
+      "sides": [     "tile_back_side",
+        "sprite_7"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile32",
+      "sides": [     "tile_back_side",
+        "sprite_8"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile42",
+      "sides": [     "tile_back_side",
+        "sprite_9"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile52",
+      "sides": [     "tile_back_side",
+        "sprite_10"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile22",
+      "sides": [     "tile_back_side",
+        "sprite_7"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile32",
+      "sides": [     "tile_back_side",
+        "sprite_8"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile42",
+      "sides": [     "tile_back_side",
+        "sprite_9"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile52",
+      "sides": [     "tile_back_side",
+        "sprite_10"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile22",
+      "sides": [     "tile_back_side",
+        "sprite_7"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile32",
+      "sides": [     "tile_back_side",
+        "sprite_8"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile42",
+      "sides": [     "tile_back_side",
+        "sprite_9"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile52",
+      "sides": [     "tile_back_side",
+        "sprite_10"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile13",
+      "sides": [     "tile_back_side",
+        "sprite_11"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile23",
+      "sides": [     "tile_back_side",
+        "sprite_12"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile33",
+      "sides": [     "tile_back_side",
+        "sprite_13"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile43",
+      "sides": [     "tile_back_side",
+        "sprite_14"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile53",
+      "sides": [     "tile_back_side",
+        "sprite_15"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile13",
+      "sides": [     "tile_back_side",
+        "sprite_11"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile23",
+      "sides": [     "tile_back_side",
+        "sprite_12"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile33",
+      "sides": [     "tile_back_side",
+        "sprite_13"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile43",
+      "sides": [     "tile_back_side",
+        "sprite_14"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile53",
+      "sides": [     "tile_back_side",
+        "sprite_15"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile13",
+      "sides": [     "tile_back_side",
+        "sprite_11"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile23",
+      "sides": [     "tile_back_side",
+        "sprite_12"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile33",
+      "sides": [     "tile_back_side",
+        "sprite_13"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile43",
+      "sides": [     "tile_back_side",
+        "sprite_14"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile53",
+      "sides": [     "tile_back_side",
+        "sprite_15"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile14",
+      "sides": [     "tile_back_side",
+        "sprite_16"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile24",
+      "sides": [     "tile_back_side",
+        "sprite_17"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile34",
+      "sides": [     "tile_back_side",
+        "sprite_18"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile44",
+      "sides": [     "tile_back_side",
+        "sprite_19"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile54",
+      "sides": [     "tile_back_side",
+        "sprite_20"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile14",
+      "sides": [     "tile_back_side",
+        "sprite_16"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile24",
+      "sides": [     "tile_back_side",
+        "sprite_17"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile34",
+      "sides": [     "tile_back_side",
+        "sprite_18"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile44",
+      "sides": [     "tile_back_side",
+        "sprite_19"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile54",
+      "sides": [     "tile_back_side",
+        "sprite_20"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile14",
+      "sides": [     "tile_back_side",
+        "sprite_16"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile24",
+      "sides": [     "tile_back_side",
+        "sprite_17"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile34",
+      "sides": [     "tile_back_side",
+        "sprite_18"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile44",
+      "sides": [     "tile_back_side",
+        "sprite_19"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile54",
+      "sides": [     "tile_back_side",
+        "sprite_20"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile14",
+      "sides": [     "tile_back_side",
+        "sprite_16"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile24",
+      "sides": [     "tile_back_side",
+        "sprite_17"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile34",
+      "sides": [     "tile_back_side",
+        "sprite_18"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile44",
+      "sides": [     "tile_back_side",
+        "sprite_19"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile54",
+      "sides": [     "tile_back_side",
+        "sprite_20"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile15",
+      "sides": [     "tile_back_side",
+        "sprite_21"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile25",
+      "sides": [     "tile_back_side",
+        "sprite_22"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile15",
+      "sides": [     "tile_back_side",
+        "sprite_21"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile25",
+      "sides": [     "tile_back_side",
+        "sprite_22"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile15",
+      "sides": [     "tile_back_side",
+        "sprite_21"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile25",
+      "sides": [     "tile_back_side",
+        "sprite_22"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile15",
+      "sides": [     "tile_back_side",
+        "sprite_21"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile25",
+      "sides": [     "tile_back_side",
+        "sprite_22"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile15",
+      "sides": [     "tile_back_side",
+        "sprite_21"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile25",
+      "sides": [     "tile_back_side",
+        "sprite_22"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile15",
+      "sides": [     "tile_back_side",
+        "sprite_21"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile25",
+      "sides": [     "tile_back_side",
+        "sprite_22"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile15",
+      "sides": [     "tile_back_side",
+        "sprite_21"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile25",
+      "sides": [     "tile_back_side",
+        "sprite_22"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile15",
+      "sides": [     "tile_back_side",
+        "sprite_21"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile25",
+      "sides": [     "tile_back_side",
+        "sprite_22"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile15",
+      "sides": [     "tile_back_side",
+        "sprite_21"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile25",
+      "sides": [     "tile_back_side",
+        "sprite_22"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile35",
+      "sides": [     "tile_back_side",
+        "sprite_23"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile45",
+      "sides": [     "tile_back_side",
+        "sprite_24"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile35",
+      "sides": [     "tile_back_side",
+        "sprite_23"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile45",
+      "sides": [     "tile_back_side",
+        "sprite_24"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile35",
+      "sides": [     "tile_back_side",
+        "sprite_23"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "tile",
+      "name": "Tile45",
+      "sides": [     "tile_back_side",
+        "sprite_24"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 4,
+          "y": 4,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+  
+  
+  
+    {
+      "type": "piece",
+      "category": "mastertile",
+      "name": "Tile55",
+      "sides": [
+        "sprite_25"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 631,
+          "y": 541,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	
+	
+	
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player1",
+      "sides": [
+        "sprite_26"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 100,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player2",
+      "sides": [
+        "sprite_27"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 150,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player3",
+      "sides": [
+        "sprite_28"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 200,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player4",
+      "sides": [
+        "sprite_29"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 250,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player5",
+      "sides": [
+        "sprite_30"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player1",
+      "sides": [
+        "sprite_26"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 100,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player2",
+      "sides": [
+        "sprite_27"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 150,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player3",
+      "sides": [
+        "sprite_28"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 200,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player4",
+      "sides": [
+        "sprite_29"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 250,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player5",
+      "sides": [
+        "sprite_30"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player1",
+      "sides": [
+        "sprite_26"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 100,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player2",
+      "sides": [
+        "sprite_27"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 150,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player3",
+      "sides": [
+        "sprite_28"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 200,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player4",
+      "sides": [
+        "sprite_29"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 250,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player5",
+      "sides": [
+        "sprite_30"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player1",
+      "sides": [
+        "sprite_26"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 100,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player2",
+      "sides": [
+        "sprite_27"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 150,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player3",
+      "sides": [
+        "sprite_28"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 200,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player4",
+      "sides": [
+        "sprite_29"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 250,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player5",
+      "sides": [
+        "sprite_30"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player1",
+      "sides": [
+        "sprite_26"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 100,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player2",
+      "sides": [
+        "sprite_27"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 150,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player3",
+      "sides": [
+        "sprite_28"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 200,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player4",
+      "sides": [
+        "sprite_29"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 250,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player5",
+      "sides": [
+        "sprite_30"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player1",
+      "sides": [
+        "sprite_26"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 100,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player2",
+      "sides": [
+        "sprite_27"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 150,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player3",
+      "sides": [
+        "sprite_28"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 200,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player4",
+      "sides": [
+        "sprite_29"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 250,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player5",
+      "sides": [
+        "sprite_30"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player1",
+      "sides": [
+        "sprite_26"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 100,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player2",
+      "sides": [
+        "sprite_27"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 150,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player3",
+      "sides": [
+        "sprite_28"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 200,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player4",
+      "sides": [
+        "sprite_29"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 250,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": "player",
+      "name": "Player5",
+      "sides": [
+        "sprite_30"
+      ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 0,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    }
+  ]
+}

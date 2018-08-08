@@ -1,0 +1,1132 @@
+{
+  "version": "1",
+  "sprites": {
+    "red": {
+      "x": 0,
+      "y": 0,
+      "width": 30,
+      "height": 31
+    },
+    "green": {
+      "x": 30,
+      "y": 0,
+      "width": 30,
+      "height": 31
+    },
+    "yellow": {
+      "x": 60,
+      "y": 0,
+      "width": 30,
+      "height": 31
+    },
+    "blue": {
+      "x": 90,
+      "y": 0,
+      "width": 30,
+      "height": 31
+    },
+    "house": {
+      "x": 153,
+      "y": 0,
+      "width": 18,
+      "height": 29
+    },
+    "hotel": {
+      "x": 172,
+      "y": 0,
+      "width": 18,
+      "height": 29
+    }
+  },
+  "components": [
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "red"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 200,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "green"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 200,
+          "z": 0
+        },
+        "rotation": 0
+		}
+      },
+	  {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "yellow"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 300,
+          "y": 200,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "blue"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 350,
+          "y": 200,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "house"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 200,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+	{
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    },
+    {
+      "type": "piece",
+      "category": null,
+      "name": "Player1.1",
+      "sides": [
+        "hotel"
+	   ],
+      "currentSide": 0,
+      "location": {
+        "position": {
+          "x": 250,
+          "y": 300,
+          "z": 0
+        },
+        "rotation": 0
+      }
+    }
+    
+  ]
+}

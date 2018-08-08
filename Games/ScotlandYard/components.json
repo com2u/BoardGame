@@ -1,0 +1,88 @@
+{
+  "Components": [
+    {
+      "name": "Player1",
+      "source": {
+        "x": 0,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 0,
+        "y": 390,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player2",
+      "source": {
+        "x": 29,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 50,
+        "y": 390,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player3",
+      "source": {
+        "x": 58,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 100,
+        "y": 390,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player4",
+      "source": {
+        "x": 87,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 150,
+        "y": 390,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player5",
+      "source": {
+        "x": 116,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 200,
+        "y": 390,
+        "rotation": 0
+      }
+    },
+    {
+      "name": "Player6",
+      "source": {
+        "x": 145,
+        "y": 0,
+        "width": 29,
+        "height": 29
+      },
+      "target": {
+        "x": 250,
+        "y": 390,
+        "rotation": 0
+      }
+    }
+  ]
+}
