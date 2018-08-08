@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Board Game</title>
+  <style>
+    .game-view__board {
+      position: relative;
+      user-select: none;
+      transform-style: preserve-3d;
+    }
+
+    .game-view__board > * {
+      display: block;
+    }
+
+    .game-view > textarea {
+      display: none;
+      min-width: 400px;
+      min-height: 200px;
+    }
+
+    .game-view--show-game-state-json > textarea {
+      display: block;
+    }
+
+    .game-view__board > .movable-piece-view {
+      position: absolute;
+      top: 0;
+      left: 0;
+      cursor: move;
+    }
+
+    .game-view__current-actor {
+      font-family: monospace;
+    }
+
+    .movable-piece-view__rotation-handle {
+      position: absolute;
+      top: -5%;
+      left: 50%;
+      min-width: 32px;
+      width: 50%;
+      min-height: 15px;
+      background: red;
+      border-radius: 100%;
+      transform: translate3d(-50%, -100%, 0);
+      background: url(./rotate-icon.png) no-repeat center;
+      background-size: contain;
+    }
+
+    .container-view.piece-container-view__controls {
+      position: absolute;
+      top: 100%;
+    }
+
+    .piece-container-view__items-count-label {
+      position: absolute;
+      padding: 0.3em 0.5em;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
