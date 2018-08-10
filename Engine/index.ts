@@ -1,7 +1,7 @@
-import { loadJSON, JSONLoader } from "./json-loader";
+import { loadJSON, Loader } from "./json-loader";
 import { MainView } from "./Views/Main";
 
-const loader = new JSONLoader(
+const loader = new Loader(
   window.location.href.substring(0, window.location.href.lastIndexOf('/'))
 )
 

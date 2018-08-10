@@ -1,4 +1,4 @@
-import { JSONLoader } from '../json-loader'
+import { Loader } from '../json-loader'
 import { SpriteLocationV0, SpriteConfig, SpriteView, SpriteLocation } from './Sprite'
 import { JSONView } from './JSON'
 import { CheckBoxField } from './CheckBoxField'
@@ -12,6 +12,7 @@ import { PieceContainerView } from './PieceContainer';
 import { shuffle } from '../random-utils';
 import { GameStateContainer } from './GameStateStore';
 import { GameHistoryView } from './GameHistory';
+import { parseGameJSON } from '../Services/ParseGameJSON';
 
 export type ComponentType = 'piece' | 'container'
 
@@ -38,6 +39,12 @@ export interface SpritesMap {
   [spriteName: string]: SpriteConfig
 }
 
+export interface GameDefinition {
+  boardImageURL: string,
+  componentsSpriteSheetURL: string,
+  config: GameConfig
+}
+
 export interface GameConfig {
   version: '2',
   sprites: SpritesMap,
@@ -60,8 +67,7 @@ export interface GameConfigV0 {
 
 export class GameView {
   constructor (
-    private loader: JSONLoader,
-    private gameId: string,
+    private gameDefinition: GameDefinition,
     private root: HTMLElement
   ) {
     this.board = document.createElement('div')
@@ -102,36 +108,21 @@ export class GameView {
     this.saveButton = new ButtonView(
       this.root,
       'Save',
-      () => downloadJsonFile(`${this.gameId}.json`, JSON.stringify(this.gameConfig, null, 2))
+      () => downloadJsonFile(`${'components'}.json`, JSON.stringify(this.gameConfig, null, 2))
     )
 
-    this
-      .loader
-      .loadJSON<any>(`Games/${this.gameId}/components.json`)
-      .then(result => {
-        let gameConfig: GameConfig
-        if (result.version == null) {
-          gameConfig = updateGameStateFromV1ToV2(updateGameStateFromV0ToV1(result as GameConfigV0))
-        } else if (result.version === '1') {
-          gameConfig = updateGameStateFromV1ToV2(result as GameConfigV1)
-        } else if (result.version === '2') {
-          gameConfig = result
-        } else {
-          throw new Error('Unsupported game config loaded')
-        }
-        
-        this.gameConfig = gameConfig
-        this.gameStateContainer = new GameStateContainer(gameConfig.components)
-        this.gameStateContainer.state.map(components => {
-          this.updateComponentPositions(components)
-          if (this.gameConfig != null) {
-            this.JSONView.setValue({
-              ...this.gameConfig,
-              components
-            })
-          }
+   
+    this.gameConfig = gameDefinition.config
+    this.gameStateContainer = new GameStateContainer(gameDefinition.config.components)
+    this.gameStateContainer.state.map(components => {
+      this.updateComponentPositions(components)
+      if (this.gameConfig != null) {
+        this.JSONView.setValue({
+          ...this.gameConfig,
+          components
         })
-      })
+      }
+    })
   }
 
   private updateComponentPositions(components: BoardComponent[]) {
@@ -175,10 +166,8 @@ export class GameView {
       return
     }
 
-    const componentsSpriteSheet = `Games/${this.gameId}/components.png`
-
     this.background = document.createElement('img')
-    this.background.src = `Games/${this.gameId}/board.png`
+    this.background.src = this.gameDefinition.boardImageURL
     this.background.setAttribute('draggable', 'false')
     this.board.appendChild(this.background)
     
@@ -194,7 +183,7 @@ export class GameView {
             this.board,
             piece,
             config.sprites,
-            componentsSpriteSheet,
+            this.gameDefinition.componentsSpriteSheetURL,
             piece.sides,
             piece.currentSide,
             () => {
@@ -246,7 +235,7 @@ export class GameView {
             const container = c as PieceContainerComponent
             const sprite = new SpriteView(
               null,
-              componentsSpriteSheet,
+              this.gameDefinition.componentsSpriteSheetURL,
               config.sprites[container.backgroundSprite],
               container.backgroundSprite
             )
