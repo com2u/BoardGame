@@ -1,9 +1,9 @@
 import { View } from './View'
-import { ReadonlyObservableArray } from '../../reaction-framework/observable-array';
-import { createElement } from './CreateElement';
+import { ReadonlyObservableArray } from '../../reaction-framework/observable-array'
+import { createElement } from '../HTMLHelpers/CreateElement'
 
 export class ListView<ListItem> implements View {
-  constructor (
+  constructor(
     private array: ReadonlyObservableArray<ListItem>,
     private itemRenderer: (item: ListItem) => View,
     private className: string | null = null
@@ -31,9 +31,8 @@ export class ListView<ListItem> implements View {
   }
 
   public destroy() {
-    let child: Node | null
-    while (child = this.container.firstChild) {
-      this.container.removeChild(child)
+    while (this.container.hasChildNodes()) {
+      this.container.removeChild(this.container.firstChild as Node)
     }
     this.renderedViews.forEach(v => v.destroy())
     this.renderedViews = []

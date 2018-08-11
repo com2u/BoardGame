@@ -1,3 +1,5 @@
+import { View } from './View';
+
 export interface SpriteConfig {
   x: number,
   y: number,
@@ -21,9 +23,8 @@ export interface SpriteLocation {
   rotation: number
 }
 
-export class SpriteView {
-  constructor (
-    private root: HTMLElement | null,
+export class SpriteView implements View {
+  constructor(
     imageURL: string,
     config: SpriteConfig,
     name: string
@@ -36,9 +37,6 @@ export class SpriteView {
     s.backgroundPosition = `${-config.x}px ${-config.y}px`
     s.width = `${config.width}px`
     s.height = `${config.height}px`
-    if (root != null) {
-      root.appendChild(this.image)
-    }
   }
 
   private image: HTMLDivElement
@@ -48,15 +46,13 @@ export class SpriteView {
   }
 
   public destroy() {
-    if (this.root != null && this.root.contains(this.image)) {
-      this.root.removeChild(this.image)
-    }
+
   }
 
   private _visible = true
+
   public set visible(newValue: boolean) {
     this.image.style.display = newValue ? 'block' : 'none'
     this._visible = newValue
   }
-
 }

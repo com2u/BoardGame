@@ -1,9 +1,8 @@
 import { View } from './View'
-import { createElement } from './CreateElement'
+import { createElement } from '../HTMLHelpers/CreateElement'
 
-export class ContainerView<Content extends { [key: string]: View }> implements View {
+export class ContainerView<Content extends { [key: string]: View | HTMLElement }> implements View {
   constructor(
-    private root: HTMLElement | null,
     private _content: Content,
     private className: string | null = null,
     private eventListeners?: {
@@ -24,11 +23,13 @@ export class ContainerView<Content extends { [key: string]: View }> implements V
     }
 
     Object.keys(_content).forEach(key => {
-      this.container.appendChild(_content[key].element)
+      const node = _content[key]
+      if (node instanceof HTMLElement) {
+        this.container.appendChild(node)
+      } else {
+        this.container.appendChild(node.element)
+      }
     })
-    if (this.root != null) {
-      this.root.appendChild(this.container)
-    }
   }
 
   public get content() {
@@ -53,11 +54,13 @@ export class ContainerView<Content extends { [key: string]: View }> implements V
         )
     }
     Object.keys(this._content).forEach(key => {
-      this.container.removeChild(this._content[key].element)
-      this._content[key].destroy()
+      const node = this._content[key]
+      if (node instanceof HTMLElement) {
+        this.container.removeChild(node)
+      } else {
+        this.container.removeChild(node.element)
+        node.destroy()
+      }
     })
-    if (this.root != null && this.root.contains(this.container)) {
-      this.root.removeChild(this.container)
-    }
   }
 }

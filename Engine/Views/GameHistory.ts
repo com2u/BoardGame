@@ -23,13 +23,12 @@ export class GameHistoryView implements View {
   }
 
   private undoButton = new ButtonView(
-    null,
     'Undo',
     () => this.gameStateContainer.unwindHistory()
   )
 
   private view = new ContainerView(
-    null, {
+    {
       countLabel: new LabelView(
         '',
         'game-history-view--items-count-label'
@@ -38,7 +37,6 @@ export class GameHistoryView implements View {
         this.gameStateContainer.history,
         item => {
           return new ContainerView(
-            null,
             {
               name: new LabelView(item.action, 'history-list__item__name'),
               time: new LabelView(item.time.toLocaleTimeString(), 'history-list__item__time')
@@ -49,7 +47,6 @@ export class GameHistoryView implements View {
         'history-list'
       ),
       controls: new ContainerView(
-        null,
         {
           undoButton: this.undoButton
         }

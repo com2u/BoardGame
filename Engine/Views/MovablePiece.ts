@@ -1,14 +1,13 @@
-import { Vector3, add, isZero } from '../vector-3';
-import { View } from './View';
+import { Vector3, add, isZero } from '../vector-3'
+import { View } from './View'
 
 export interface MovablePieceLocation {
   position: Vector3,
   rotation: number
 }
 
-export class MovablePieceView<Content extends View> {
-  constructor (
-    private root: HTMLElement,
+export class MovablePieceView<Content extends View> implements View {
+  constructor(
     public readonly name: string,
     public location: MovablePieceLocation,
     private _content: Content,
@@ -16,31 +15,36 @@ export class MovablePieceView<Content extends View> {
     private bringToTop: (sprite: MovablePieceView<Content>) => void,
     private zIndex = 0
   ) {
-    this.element = document.createElement('div')
-    this.element.classList.add('movable-piece-view')
-    this.element.appendChild(this._content.element)
-    root.appendChild(this.element)
+    this.root = document.createElement('div')
+    this.root.classList.add('movable-piece-view')
+    this.root.appendChild(this._content.element)
 
     this.rotationHandle = document.createElement('div')
     this.rotationHandle.classList.add('movable-piece-view__rotation-handle')
     this.rotationHandle.style.display = 'none'
-    this.element.appendChild(this.rotationHandle)
-    
-    this.element.addEventListener('pointerdown', this.onElementPointerDown)
+    this.root.appendChild(this.rotationHandle)
+
+    this.root.addEventListener('pointerdown', this.onElementPointerDown)
     this.rotationHandle.addEventListener('pointerdown', this.onRotationHandlePointerDown)
     document.addEventListener('pointerdown', this.onDocumentPointerDown)
     document.addEventListener('pointermove', this.onDocumentPointerMove)
     document.addEventListener('pointerup', this.onDocumentPointerUp)
-    
+  }
+
+  public mounted() {
     this.updateZIndex()
-    this.updateElementLocation(location)
+    this.updateElementLocation(this.location)
   }
 
   public get content() {
     return this._content
   }
 
-  private element: HTMLElement
+  private root: HTMLElement
+
+  public get element() {
+    return this.root
+  }
 
   private rotationHandle: HTMLDivElement
 
@@ -84,12 +88,12 @@ export class MovablePieceView<Content extends View> {
   }
 
   private updateZIndex() {
-    this.element.style.zIndex = this.showRotationHandle ? '10' : this.zIndex.toString();
+    this.root.style.zIndex = this.showRotationHandle ? '10' : this.zIndex.toString();
   }
 
   private onRotationHandlePointerDown = (event: PointerEvent) => {
     event.stopPropagation();
-    const rect = this.element.getBoundingClientRect()
+    const rect = this.root.getBoundingClientRect()
     this.rotationStartEventLocation = {
       x: event.pageX,
       y: event.pageY
@@ -141,13 +145,13 @@ export class MovablePieceView<Content extends View> {
       }
       const a = vectorToStartEventPosition
       const b = vectorToNewEventPosition
-      const angle = Math.atan2(b.y,b.x) - Math.atan2(a.y,a.x)
+      const angle = Math.atan2(b.y, b.x) - Math.atan2(a.y, a.x)
       return this.location.rotation + Math.round(angle * 180 / Math.PI)
     }
   }
 
   private onDocumentPointerDown = (event: PointerEvent) => {
-    if (event.target != this.element) {
+    if (event.target !== this.root) {
       this.showRotationHandle = false
     }
   }
@@ -183,9 +187,9 @@ export class MovablePieceView<Content extends View> {
           this.location.position,
           increment
         )
-      })  
+      })
     }
-    
+
     this.dragStartEventLocation = null
     this.draggingInProgress = false
   }
@@ -201,11 +205,10 @@ export class MovablePieceView<Content extends View> {
   }
 
   public destroy() {
-    this.element.removeChild(this._content.element)
+    this.root.removeChild(this._content.element)
     this._content.destroy()
-    this.element.removeEventListener('pointerdown', this.onElementPointerDown)
+    this.root.removeEventListener('pointerdown', this.onElementPointerDown)
     document.removeEventListener('pointermove', this.onDocumentPointerMove)
     document.removeEventListener('pointerup', this.onDocumentPointerUp)
-    this.root.removeChild(this.element)
   }
 }

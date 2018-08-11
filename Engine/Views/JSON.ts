@@ -1,13 +1,13 @@
-export class JSONView<EditedObject> {
-  constructor (
-    private root: HTMLElement,
+import { View } from './View'
+
+export class JSONView<EditedObject> implements View {
+  constructor(
     value: EditedObject,
     private onInput: (newValue: EditedObject) => void
   ) {
     this.input = document.createElement('textarea')
     this.input.addEventListener('keyup', this.handleInput)
     this.setValue(value)
-    this.root.appendChild(this.input)
   }
 
   public setValue(value: EditedObject) {
@@ -24,8 +24,11 @@ export class JSONView<EditedObject> {
 
   private input: HTMLTextAreaElement
 
+  public get element() {
+    return this.input
+  }
+
   public destroy() {
     this.input.removeEventListener('keyup', this.handleInput)
-    this.root.removeChild(this.input)
   }
 }

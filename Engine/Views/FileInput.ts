@@ -1,5 +1,5 @@
 import { View } from './View'
-import { createElement } from './CreateElement';
+import { createElement } from '../HTMLHelpers/CreateElement';
 
 export class FileInputView implements View {
   constructor (

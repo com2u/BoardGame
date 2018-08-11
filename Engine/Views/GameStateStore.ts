@@ -19,10 +19,10 @@ export interface GameStateHistoryItem {
 }
 
 export class GameStateContainer {
-  constructor (
+  constructor(
     private initialState: GameState
   ) {
-    
+
   }
 
   private _history = new ObservableArray<GameStateHistoryItem>([])

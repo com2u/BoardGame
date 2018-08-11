@@ -1,5 +1,5 @@
 {
-  "version": "1",
+  "version": "2",
   "sprites": {
     "sprite_1": {
       "x": 58,
@@ -36,29 +36,12 @@
       ],
       "currentSide": 0,
       "location": {
+        "rotation": 0,
         "position": {
-          "x": 100,
-          "y": 100,
+          "x": 71,
+          "y": 66,
           "z": 0
-        },
-        "rotation": 0
-      }
-    },
-    {
-      "type": "piece",
-      "category": null,
-      "name": "Player1.2",
-      "sides": [
-        "sprite_1"
-      ],
-      "currentSide": 0,
-      "location": {
-        "position": {
-          "x": 360,
-          "y": 321,
-          "z": 0
-        },
-        "rotation": 0
+        }
       }
     }
   ]

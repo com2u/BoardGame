@@ -1,5 +1,5 @@
-import { View } from "./View";
-import { createElement } from "./CreateElement";
+import { View } from './View';
+import { createElement } from '../HTMLHelpers/CreateElement';
 
 export class InputField<Input extends View> implements View {
   constructor(

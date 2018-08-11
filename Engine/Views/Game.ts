@@ -13,6 +13,11 @@ import { shuffle } from '../random-utils';
 import { GameStateContainer } from './GameStateStore';
 import { GameHistoryView } from './GameHistory';
 import { parseGameJSON } from '../Services/ParseGameJSON';
+import { View } from './View';
+import { ContainerView } from './Container';
+import { SlotView } from './Slot';
+import { createElement } from '../HTMLHelpers/CreateElement';
+import { setClassName } from '../HTMLHelpers/SetClassName';
 
 export type ComponentType = 'piece' | 'container'
 
@@ -65,65 +70,59 @@ export interface GameConfigV0 {
   }[]
 }
 
-export class GameView {
-  constructor (
-    private gameDefinition: GameDefinition,
-    private root: HTMLElement
+export class GameView implements View {
+  constructor(
+    private gameName: string,
+    private gameDefinition: GameDefinition
   ) {
-    this.board = document.createElement('div')
-    this.board.classList.add('game-view__board')
-    this.root.appendChild(this.board)
-
-    this.currentActorLabel = document.createElement('div')
-    this.currentActorLabel.classList.add('game-view__current-actor')
-    this.root.appendChild(this.currentActorLabel)
-
-    this.showJSONViewField = new CheckBoxField(
-      this.root,
-      'Show game state: ',
-      showJSON => {
-        if (showJSON) {
-          this.root.classList.add('game-view--show-game-state-json')
-        } else {
-          this.root.classList.remove('game-view--show-game-state-json')
-        }
-      },
-    )
-
-    this.JSONView = new JSONView<GameConfig>(
-      root,
-      {
-        version: '2',
-        sprites: {},
-        components: []
-      },
-      newConfig => {
-        this.gameConfig = newConfig
-        if (this.gameStateContainer != null) {
-          this.gameStateContainer.addState(newConfig.components, 'changed_in_json_editor')
-        }
-      }
-    )
-
-    this.saveButton = new ButtonView(
-      this.root,
-      'Save',
-      () => downloadJsonFile(`${'components'}.json`, JSON.stringify(this.gameConfig, null, 2))
-    )
-
-   
     this.gameConfig = gameDefinition.config
     this.gameStateContainer = new GameStateContainer(gameDefinition.config.components)
     this.gameStateContainer.state.map(components => {
       this.updateComponentPositions(components)
       if (this.gameConfig != null) {
-        this.JSONView.setValue({
+        this.JSONViewInput.setValue({
           ...this.gameConfig,
           components
         })
       }
     })
   }
+
+  private JSONViewInput = new JSONView<GameConfig>(
+    {
+      version: '2',
+      sprites: {},
+      components: []
+    },
+    newConfig => {
+      this.gameConfig = newConfig
+      if (this.gameStateContainer != null) {
+        this.gameStateContainer.addState(newConfig.components, 'changed_in_json_editor')
+      }
+    }
+  )
+
+  private board = createElement('div', ['game-view__board'])
+
+  private root = new ContainerView({
+    board: this.board,
+    currentActorLabel: createElement('div', ['game-view__current-actor']),
+    showJSONViewField: new CheckBoxField(
+      'Show game state: ',
+      showJSON => {
+        setClassName(this.root.element, 'game-view--show-game-state-json', showJSON)
+      }
+    ),
+    JSONViewInput: this.JSONViewInput,
+    saveButton: new ButtonView(
+      'Save',
+      () => downloadJsonFile(
+        `${this.gameName}.json`,
+        JSON.stringify(this.gameConfig, null, 2)
+      )
+    ),
+    historySlot: new SlotView<GameHistoryView>('game-history-slot', null)
+  }, 'game-view')
 
   private updateComponentPositions(components: BoardComponent[]) {
     if (this.gameConfig == null) {
@@ -133,7 +132,7 @@ export class GameView {
       ...this.gameConfig,
       components
     }
-    this.JSONView.setValue(newConfig)
+    this.JSONViewInput.setValue(newConfig)
     this.destroyBoard()
     this.createBoard(newConfig)
     this.updateItemsAssignedToContainers()
@@ -145,17 +144,7 @@ export class GameView {
 
   private containers: MovablePieceView<PieceContainerView>[] = []
 
-  private board: HTMLDivElement
-
   private background: HTMLImageElement | null = null
-
-  private currentActorLabel: HTMLDivElement
-
-  private showJSONViewField: CheckBoxField
-
-  private saveButton: ButtonView
-
-  private JSONView: JSONView<GameConfig>
 
   private historyView?: GameHistoryView
 
@@ -170,17 +159,16 @@ export class GameView {
     this.background.src = this.gameDefinition.boardImageURL
     this.background.setAttribute('draggable', 'false')
     this.board.appendChild(this.background)
-    
+
     this.historyView = new GameHistoryView(this.gameStateContainer)
-    this.root.appendChild(this.historyView.element)
+    this.root.content.historySlot.content = this.historyView
     const sprites =
       config
         .components
-        .filter(component => component.type == 'piece')
+        .filter(component => component.type === 'piece')
         .map((c, index) => {
           const piece = c as PieceComponent
           const sprite = new MultiSidedSpriteView(
-            this.board,
             piece,
             config.sprites,
             this.gameDefinition.componentsSpriteSheetURL,
@@ -190,14 +178,14 @@ export class GameView {
               const newCurrentSide = (piece.currentSide + 1) % piece.sides.length
 
               if (piece.currentSide !== newCurrentSide && this.gameStateContainer != null) {
-                const newState = this.gameStateContainer.state.get().map(c => {
-                  if (c === piece) {
+                const newState = this.gameStateContainer.state.get().map(_c => {
+                  if (_c === piece) {
                     return {
                       ...piece,
                       currentSide: newCurrentSide
                     }
                   } else {
-                    return c
+                    return _c
                   }
                 })
                 this.gameStateContainer.addState(
@@ -208,7 +196,6 @@ export class GameView {
             }
           )
           const pieceView = new MovablePieceView(
-            this.board,
             `[${index}] ${piece.name}`,
             piece.location,
             sprite,
@@ -217,16 +204,19 @@ export class GameView {
                 this.gameStateContainer.movePiece(piece, newLocation)
               }
             },
-            piece => {
-              this.currentActorLabel.innerHTML = `Current component - ${piece.name}`
-              this.bringToTop(piece)
+            p => {
+              this.root.content.currentActorLabel.innerHTML = `Current component - ${p.name}`
+              this.bringToTop(p)
             },
             1
           )
-
+          this.board.appendChild(pieceView.element)
+          if (this.wasMounted) {
+            pieceView.mounted()
+          }
           return pieceView
         })
-    
+
     const pieceContainers =
         config
           .components
@@ -234,13 +224,11 @@ export class GameView {
           .map(c => {
             const container = c as PieceContainerComponent
             const sprite = new SpriteView(
-              null,
               this.gameDefinition.componentsSpriteSheetURL,
               config.sprites[container.backgroundSprite],
               container.backgroundSprite
             )
             const piece: MovablePieceView<PieceContainerView> = new MovablePieceView<PieceContainerView>(
-              this.board,
               container.name,
               container.location,
               new PieceContainerView(
@@ -259,11 +247,23 @@ export class GameView {
               () => {}
             )
 
+            this.board.appendChild(piece.element)
+            if (this.wasMounted) {
+              piece.mounted()
+            }
             return piece
           })
-    
+
     this.containers.push(...pieceContainers)
     this.pieces.push(...sprites)
+  }
+
+  private wasMounted = false
+
+  public mounted() {
+    this.wasMounted = true
+    this.containers.forEach(c => c.mounted())
+    this.pieces.forEach(p => p.mounted())
   }
 
   private containerToPieceMap = new Map<MovablePieceView<PieceContainerView>, MovablePieceView<MultiSidedSpriteView<PieceComponent>>[]>()
@@ -273,7 +273,7 @@ export class GameView {
   private updateItemsAssignedToContainers() {
     this.containerToPieceMap = new Map<MovablePieceView<PieceContainerView>, MovablePieceView<MultiSidedSpriteView<PieceComponent>>[]>()
     this.pieces.forEach(piece => {
-      for (let container of this.containers) {
+      for (const container of this.containers) {
         let assignedItems: MovablePieceView<MultiSidedSpriteView<PieceComponent>>[]
         if (this.containerToPieceMap.has(container)) {
           assignedItems = this.containerToPieceMap.get(container) as MovablePieceView<MultiSidedSpriteView<PieceComponent>>[]
@@ -350,9 +350,9 @@ export class GameView {
     }
 
     const shuffled = shuffle(items)
-    const map = shuffled.reduce((map, item, index) => {
-      map.set(item.content.renderedObject, index)
-      return map
+    const map = shuffled.reduce((m, item, index) => {
+      m.set(item.content.renderedObject, index)
+      return m
     }, new Map<BoardComponent, number>())
     const newState = this.gameStateContainer.state.get().map(c => {
       const shuffledItemIndex = map.get(c)
@@ -371,15 +371,6 @@ export class GameView {
       }
     })
     this.gameStateContainer.addState(newState, 'shuffle_pieces')
-    // shuffled.forEach((item, index) => item.setLocation({
-    //   rotation: item.location.rotation,
-    //   position: {
-    //     ...item.location.position,
-    //     z: index + container.location.position.z + 1
-    //   }
-    // }))
-    // this.updateJSONView()
-    // this.updateItemsAssignedToContainers()
   }
 
   public bringToTop(piece: MovablePieceView<MultiSidedSpriteView<PieceComponent>>) {
@@ -390,7 +381,7 @@ export class GameView {
         const b = elementB.location.position
         if (a.z > b.z) {
           return 1
-        } 
+        }
         if (a.z < b.z) {
           return -1
         }
@@ -406,8 +397,8 @@ export class GameView {
         }
         element.setLocation(newLocation)
       })
-    
-      piece.setLocation({
+
+    piece.setLocation({
         rotation: piece.location.rotation,
         position: {
           ...piece.location.position,
@@ -416,26 +407,28 @@ export class GameView {
       })
   }
 
+  public get element() {
+    return this.root.element
+  }
+
   public destroy() {
-    this.JSONView.destroy()
-    this.showJSONViewField.destroy()
-    this.saveButton.destroy()
-    this.root.removeChild(this.board)
-    this.root.removeChild(this.currentActorLabel)
     this.destroyBoard()
+    this.root.destroy()
   }
 
   private destroyBoard() {
     if (this.background != null) {
       this.board.removeChild(this.background)
     }
-    if (this.historyView != null) {
-      this.root.removeChild(this.historyView.element)
-      this.historyView.destroy()
-    }
     // this.root.removeChild(this.board)
-    this.pieces.forEach(element => element.destroy())
-    this.containers.forEach(container => container.destroy())
+    this.pieces.forEach(element => {
+      this.board.removeChild(element.element)
+      element.destroy()
+    })
+    this.containers.forEach(container => {
+      this.board.removeChild(container.element)
+      container.destroy()
+    })
     this.pieces = []
     this.containers = []
   }

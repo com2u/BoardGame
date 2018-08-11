@@ -6,7 +6,7 @@ import { View } from './View'
 import { LabelView } from './Label';
 
 export class PieceContainerView implements View {
-  constructor (
+  constructor(
     private root: HTMLElement,
     private backgroundSprite: SpriteView,
     private containerConfig: PieceContainerComponent,
@@ -14,7 +14,7 @@ export class PieceContainerView implements View {
     private onShuffle: () => void,
     private onReset: () => void
   ) {
-    
+
   }
 
   public get containerComponent() {
@@ -22,10 +22,9 @@ export class PieceContainerView implements View {
   }
 
   private controls = new ContainerView(
-    null,
     {
-      reset: new ButtonView(null, 'reset', () => this.onReset()),
-      shuffle: new ButtonView(null, 'shuffle', () => this.onShuffle())
+      reset: new ButtonView('reset', () => this.onReset()),
+      shuffle: new ButtonView('shuffle', () => this.onShuffle())
     },
     'piece-container-view__controls',
     {
@@ -35,7 +34,6 @@ export class PieceContainerView implements View {
   )
 
   private container = new ContainerView(
-    this.root,
     {
       itemsCountLabel: new LabelView(this.getItemsLabel(this._itemsCount), 'piece-container-view__items-count-label'),
       sprite: this.backgroundSprite,

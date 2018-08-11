@@ -1,18 +1,21 @@
-export class GameSelectionView {
+import { View } from './View';
+
+export class GameSelectionView implements View {
   constructor(
-    private root: HTMLElement,
     private games: string[],
     private onSelect: (game: string) => void
   ) {
     this.select = document.createElement('select')
     this.render()
     this.select.addEventListener('change', this.changeListener)
-    root.appendChild(this.select)
+  }
+
+  public get element() {
+    return this.select
   }
 
   private changeListener = () => {
     if (this.select.value !== '') {
-      console.log('value changed to ', this.select.value)
       this.onSelect(this.select.value)
     }
   }

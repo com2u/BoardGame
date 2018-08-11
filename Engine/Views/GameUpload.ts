@@ -16,7 +16,7 @@ const imageExtensions = [
 ].join()
 
 export class GameUploadView implements View {
-  constructor (
+  constructor(
     private onGameSubmit: (name: string, game: GameDefinition) => GameAddResponse
   ) {
     this.handleFormUpdate()
@@ -36,11 +36,11 @@ export class GameUploadView implements View {
           fileToDataURL(componentsSpriteSheet),
           fileToText(gameConfig)
         ])
-        .then(([boardImageURL, componentsSpriteSheetURL, gameConfig]) => {
+        .then(([boardImageURL, componentsSpriteSheetURL, config]) => {
           this.gameDefinition = {
             boardImageURL,
             componentsSpriteSheetURL,
-            config: parseGameJSON(gameConfig)
+            config: parseGameJSON(config)
           }
           this.container.content.form.content.footer.content.submit.element.disabled = false
         })
@@ -60,7 +60,7 @@ export class GameUploadView implements View {
     const name = form.name.input.content.input.value
     if (this.gameDefinition != null && name != null) {
       const response = this.onGameSubmit(name, this.gameDefinition)
-      if (response.status == 'error') {
+      if (response.status === 'error') {
         form.footer.content.errors.text = response.errors.join('\n')
       } else {
         form.footer.content.errors.text = ''
@@ -69,16 +69,13 @@ export class GameUploadView implements View {
   }
 
   private container = new ContainerView(
-    null,
     {
       header: new LabelView('Upload game files', 'game-upload-view__header'),
       form: new ContainerView(
-        null,
         {
           name: new InputField(
             'Name',
             new ContainerView(
-              null, 
               {
                 input: new InputView(
                   this.handleFormUpdate
@@ -110,17 +107,16 @@ export class GameUploadView implements View {
                 '.json'
               )
             ),
-          footer: new ContainerView(null, {
+          footer: new ContainerView({
             errors: new LabelView('', 'game-upload-view__errors'),
             submit: new ButtonView(
-              null,
               'submit',
               this.handleSubmit
             )
           }, 'game-upload-view__footer')
         },
         'game-upload-view__form'
-      )      
+      )
     },
     'game-upload-view'
   )

@@ -1,4 +1,4 @@
-import * as express from 'express'
+import * as express from '../node_modules/@types/express/index'
 const app = express()
 
 app.get('/', (req, res) => res.send('Hello World!'))

@@ -1,9 +1,9 @@
-import { SpriteView } from "./Sprite";
-import { SpritesMap } from "./Game";
+import { SpriteView } from './Sprite';
+import { SpritesMap } from './Game';
+import { View } from './View';
 
-export class MultiSidedSpriteView<RenderedObject> {
-  constructor (
-    private root: HTMLElement,
+export class MultiSidedSpriteView<RenderedObject> implements View {
+  constructor(
     private _renderedObject: RenderedObject,
     private spritesMap: SpritesMap,
     spriteSheetURL: string,
@@ -13,10 +13,10 @@ export class MultiSidedSpriteView<RenderedObject> {
   ) {
     this._element = document.createElement('div')
     this._element.classList.add('multi-sided-sprite-view')
-    this.root.appendChild(this._element)
     this.sprites = sides.map(side => {
-      const sprite = new SpriteView(this._element, spriteSheetURL, this.spritesMap[side], side)
+      const sprite = new SpriteView(spriteSheetURL, this.spritesMap[side], side)
       sprite.visible = false
+      this._element.appendChild(sprite.element)
       return sprite
     })
     this.currentSide = _currentSide
@@ -42,7 +42,7 @@ export class MultiSidedSpriteView<RenderedObject> {
   public set currentSide(newValue: number) {
     this._currentSide = newValue
     this.sprites.forEach((sprite, index) => {
-      sprite.visible = index == newValue
+      sprite.visible = index === newValue
     })
   }
 

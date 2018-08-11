@@ -5,7 +5,7 @@ export function createElement<K extends keyof HTMLElementTagNameMap>(
   attributes?: { [name: string]: string }
 ) {
   const element = document.createElement(name)
-  
+
   if (classes != null) {
     classes.forEach(className => {
       if (className != null) {

@@ -1,6 +1,7 @@
-export class CheckBoxField {
+import { View } from './View'
+
+export class CheckBoxField implements View {
   constructor(
-    private root: HTMLElement,
     private labelText: string,
     private onChange: (checked: boolean) => void
   ) {
@@ -11,15 +12,17 @@ export class CheckBoxField {
 
     this.label.innerText = labelText
     this.label.appendChild(this.input)
-    this.root.appendChild(this.label)
   }
 
   private label: HTMLLabelElement
   private input: HTMLInputElement
   private handleCheck = () => this.onChange(this.input.checked)
 
+  public get element() {
+    return this.label
+  }
+
   public destroy() {
     this.input.removeEventListener('change', this.handleCheck)
-    this.root.removeChild(this.label)
   }
 }

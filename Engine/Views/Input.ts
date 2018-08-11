@@ -1,5 +1,5 @@
 import { View } from './View'
-import { createElement } from './CreateElement';
+import { createElement } from '../HTMLHelpers/CreateElement'
 
 export class InputView implements View {
   constructor(
@@ -19,7 +19,7 @@ export class InputView implements View {
   )
 
   public get value() {
-    return this.input.value == '' ? null : this.input.value
+    return this.input.value === '' ? null : this.input.value
   }
 
   public set value(value: string | null) {
