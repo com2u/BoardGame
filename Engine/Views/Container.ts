@@ -4,12 +4,19 @@ import { createElement } from '../HTMLHelpers/CreateElement'
 export class ContainerView<Content extends { [key: string]: View | HTMLElement }> implements View {
   constructor(
     private _content: Content,
-    private className: string | null = null,
+    className: string | string[] | null = null,
     private eventListeners?: {
       [K in keyof HTMLElementEventMap]?: (this: HTMLDivElement, ev: HTMLElementEventMap[K]) => any
     }
   ) {
-    this.container = createElement('div', ['container-view', className])
+    const classNames = ['container-view']
+
+    if (Array.isArray(className)) {
+      classNames.push(...className)
+    } else if (typeof className === 'string') {
+      classNames.push(className)
+    }
+    this.container = createElement('div', classNames)
 
     if (this.eventListeners != null) {
       Object

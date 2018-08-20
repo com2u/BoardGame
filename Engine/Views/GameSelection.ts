@@ -1,22 +1,27 @@
 import { View } from './View';
+import { createElement } from '../HTMLHelpers/CreateElement';
+import { setClassName } from '../HTMLHelpers/SetClassName';
 
 export class GameSelectionView implements View {
   constructor(
     private games: string[],
     private onSelect: (game: string) => void
   ) {
-    this.select = document.createElement('select')
     this.render()
-    this.select.addEventListener('change', this.changeListener)
+    this.select.addEventListener('click', this.clickListener)
   }
 
   public get element() {
     return this.select
   }
 
-  private changeListener = () => {
-    if (this.select.value !== '') {
-      this.onSelect(this.select.value)
+  private _value: string | null = null
+
+  private clickListener = (event: Event) => {
+    const node = event.target as HTMLElement
+    if (node.dataset.value != null) {
+      this.value = node.dataset.value
+      this.onSelect(node.dataset.value)
     }
   }
 
@@ -25,12 +30,16 @@ export class GameSelectionView implements View {
     this.render()
   }
 
-  public set value(v: string) {
-    this.select.value = v
+  public set value(v: string | null) {
+    this._value = v
+    for (const node of this.select.childNodes) {
+      const n = node as HTMLElement
+      setClassName(n, 'selected', n.dataset.value === v)
+    }
   }
 
   public get value() {
-    return this.select.value
+    return this._value
   }
 
   private render() {
@@ -38,16 +47,16 @@ export class GameSelectionView implements View {
       this.select.removeChild(this.select.firstChild as Node)
     }
     this.games.forEach(game => {
-      const option = document.createElement('option')
-      option.value = game
+      const option = createElement('button', ['select-option'], {}, { tabIndex: '0' })
+      option.dataset.value = game
       option.innerText = game
       this.select.appendChild(option)
     })
   }
 
-  private select: HTMLSelectElement
+  private select = createElement('div', [], { display: 'flex', flexFlow: 'column' })
 
   public destroy() {
-    this.select.removeEventListener('change', this.changeListener)
+    this.select.removeEventListener('click', this.clickListener)
   }
 }

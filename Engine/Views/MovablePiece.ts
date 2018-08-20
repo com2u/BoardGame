@@ -13,7 +13,8 @@ export class MovablePieceView<Content extends View> implements View {
     private _content: Content,
     private onLocationInput: (newLocation: MovablePieceLocation) => void,
     private bringToTop: (sprite: MovablePieceView<Content>) => void,
-    private zIndex = 0
+    private zIndex = 0,
+    showRotationHandle = false
   ) {
     this.root = document.createElement('div')
     this.root.classList.add('movable-piece-view')
@@ -29,6 +30,7 @@ export class MovablePieceView<Content extends View> implements View {
     document.addEventListener('pointerdown', this.onDocumentPointerDown)
     document.addEventListener('pointermove', this.onDocumentPointerMove)
     document.addEventListener('pointerup', this.onDocumentPointerUp)
+    this.showRotationHandle = showRotationHandle
   }
 
   public mounted() {
@@ -50,11 +52,11 @@ export class MovablePieceView<Content extends View> implements View {
 
   private _showRotationHandle = false
 
-  private get showRotationHandle() {
+  public get showRotationHandle() {
     return this._showRotationHandle
   }
 
-  private set showRotationHandle(value: boolean) {
+  public set showRotationHandle(value: boolean) {
     this.rotationHandle.style.display = value ? 'block' : 'none'
     this._showRotationHandle = value
     this.updateZIndex()

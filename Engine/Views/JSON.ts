@@ -3,9 +3,11 @@ import { View } from './View'
 export class JSONView<EditedObject> implements View {
   constructor(
     value: EditedObject,
-    private onInput: (newValue: EditedObject) => void
+    private onInput: (newValue: EditedObject) => void,
+    className: string
   ) {
     this.input = document.createElement('textarea')
+    this.input.classList.add(className)
     this.input.addEventListener('keyup', this.handleInput)
     this.setValue(value)
   }

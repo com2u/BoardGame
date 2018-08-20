@@ -1,23 +1,12 @@
-import { Loader } from '../json-loader'
 import { SpriteLocationV0, SpriteConfig, SpriteView, SpriteLocation } from './Sprite'
-import { JSONView } from './JSON'
-import { CheckBoxField } from './CheckBoxField'
-import { ButtonView } from './Button'
-import { postJSON } from '../post-json'
-import { downloadJsonFile } from '../download-file'
-import { updateGameStateFromV0ToV1, updateGameStateFromV1ToV2 } from '../update-game-json'
 import { MovablePieceView, MovablePieceLocation } from './MovablePiece'
-import { MultiSidedSpriteView } from './MultiSidedSprite';
-import { PieceContainerView } from './PieceContainer';
-import { shuffle } from '../random-utils';
-import { GameStateContainer } from './GameStateStore';
-import { GameHistoryView } from './GameHistory';
-import { parseGameJSON } from '../Services/ParseGameJSON';
-import { View } from './View';
-import { ContainerView } from './Container';
-import { SlotView } from './Slot';
-import { createElement } from '../HTMLHelpers/CreateElement';
-import { setClassName } from '../HTMLHelpers/SetClassName';
+import { MultiSidedSpriteView } from './MultiSidedSprite'
+import { PieceContainerView } from './PieceContainer'
+import { shuffle } from '../random-utils'
+import { GameStateContainer } from './GameStateStore'
+import { View } from './View'
+import { ContainerView } from './Container'
+import { createElement } from '../HTMLHelpers/CreateElement'
 
 export type ComponentType = 'piece' | 'container'
 
@@ -73,55 +62,21 @@ export interface GameConfigV0 {
 export class GameView implements View {
   constructor(
     private gameName: string,
-    private gameDefinition: GameDefinition
+    private gameDefinition: GameDefinition,
+    private gameStateContainer: GameStateContainer
   ) {
     this.gameConfig = gameDefinition.config
-    this.gameStateContainer = new GameStateContainer(gameDefinition.config.components)
+
     this.gameStateContainer.state.map(components => {
       this.updateComponentPositions(components)
-      if (this.gameConfig != null) {
-        this.JSONViewInput.setValue({
-          ...this.gameConfig,
-          components
-        })
-      }
     })
   }
-
-  private JSONViewInput = new JSONView<GameConfig>(
-    {
-      version: '2',
-      sprites: {},
-      components: []
-    },
-    newConfig => {
-      this.gameConfig = newConfig
-      if (this.gameStateContainer != null) {
-        this.gameStateContainer.addState(newConfig.components, 'changed_in_json_editor')
-      }
-    }
-  )
 
   private board = createElement('div', ['game-view__board'])
 
   private root = new ContainerView({
     board: this.board,
-    currentActorLabel: createElement('div', ['game-view__current-actor']),
-    showJSONViewField: new CheckBoxField(
-      'Show game state: ',
-      showJSON => {
-        setClassName(this.root.element, 'game-view--show-game-state-json', showJSON)
-      }
-    ),
-    JSONViewInput: this.JSONViewInput,
-    saveButton: new ButtonView(
-      'Save',
-      () => downloadJsonFile(
-        `${this.gameName}.json`,
-        JSON.stringify(this.gameConfig, null, 2)
-      )
-    ),
-    historySlot: new SlotView<GameHistoryView>('game-history-slot', null)
+    currentActorLabel: createElement('div', ['game-view__current-actor'])
   }, 'game-view')
 
   private updateComponentPositions(components: BoardComponent[]) {
@@ -132,13 +87,11 @@ export class GameView implements View {
       ...this.gameConfig,
       components
     }
-    this.JSONViewInput.setValue(newConfig)
+    const rotatedElementIndex = this.pieces.findIndex(p => p.showRotationHandle)
     this.destroyBoard()
-    this.createBoard(newConfig)
+    this.createBoard(newConfig, rotatedElementIndex)
     this.updateItemsAssignedToContainers()
   }
-
-  private gameStateContainer: GameStateContainer | null = null
 
   private pieces: MovablePieceView<MultiSidedSpriteView<PieceComponent>>[] = []
 
@@ -146,11 +99,9 @@ export class GameView implements View {
 
   private background: HTMLImageElement | null = null
 
-  private historyView?: GameHistoryView
-
   private gameConfig: GameConfig | null = null
 
-  private createBoard(config: GameConfig) {
+  private createBoard(config: GameConfig, rotatedElementIndex: number | null) {
     if (this.gameStateContainer == null) {
       return
     }
@@ -160,8 +111,6 @@ export class GameView implements View {
     this.background.setAttribute('draggable', 'false')
     this.board.appendChild(this.background)
 
-    this.historyView = new GameHistoryView(this.gameStateContainer)
-    this.root.content.historySlot.content = this.historyView
     const sprites =
       config
         .components
@@ -208,7 +157,8 @@ export class GameView implements View {
               this.root.content.currentActorLabel.innerHTML = `Current component - ${p.name}`
               this.bringToTop(p)
             },
-            1
+            1,
+            rotatedElementIndex === index
           )
           this.board.appendChild(pieceView.element)
           if (this.wasMounted) {
@@ -218,41 +168,41 @@ export class GameView implements View {
         })
 
     const pieceContainers =
-        config
-          .components
-          .filter(c => c.type === 'container')
-          .map(c => {
-            const container = c as PieceContainerComponent
-            const sprite = new SpriteView(
-              this.gameDefinition.componentsSpriteSheetURL,
-              config.sprites[container.backgroundSprite],
-              container.backgroundSprite
-            )
-            const piece: MovablePieceView<PieceContainerView> = new MovablePieceView<PieceContainerView>(
-              container.name,
-              container.location,
-              new PieceContainerView(
-                this.board,
-                sprite,
-                container,
-                0,
-                () => this.shufflePieces(piece),
-                () => this.resetPieces(piece)
-              ),
-              newLocation => {
-                if (this.gameStateContainer != null) {
-                  this.gameStateContainer.movePiece(container, newLocation)
-                }
-              },
-              () => {}
-            )
+      config
+        .components
+        .filter(c => c.type === 'container')
+        .map(c => {
+          const container = c as PieceContainerComponent
+          const sprite = new SpriteView(
+            this.gameDefinition.componentsSpriteSheetURL,
+            config.sprites[container.backgroundSprite],
+            container.backgroundSprite
+          )
+          const piece: MovablePieceView<PieceContainerView> = new MovablePieceView<PieceContainerView>(
+            container.name,
+            container.location,
+            new PieceContainerView(
+              this.board,
+              sprite,
+              container,
+              0,
+              () => this.shufflePieces(piece),
+              () => this.resetPieces(piece)
+            ),
+            newLocation => {
+              if (this.gameStateContainer != null) {
+                this.gameStateContainer.movePiece(container, newLocation)
+              }
+            },
+            () => {}
+          )
 
-            this.board.appendChild(piece.element)
-            if (this.wasMounted) {
-              piece.mounted()
-            }
-            return piece
-          })
+          this.board.appendChild(piece.element)
+          if (this.wasMounted) {
+            piece.mounted()
+          }
+          return piece
+        })
 
     this.containers.push(...pieceContainers)
     this.pieces.push(...sprites)
@@ -318,7 +268,7 @@ export class GameView implements View {
     }
 
     const newState = this.gameStateContainer.state.get().map(c => {
-      if (c.category === container.content.containerComponent.category) {
+      if (c.type === 'piece' && c.category === container.content.containerComponent.category) {
         const newLocation: MovablePieceLocation = {
           rotation: container.location.rotation,
           position: {

@@ -33,24 +33,27 @@ export class GameHistoryView implements View {
         '',
         'game-history-view--items-count-label'
       ),
-      historyItemsList: new ListView<GameStateHistoryItem>(
-        this.gameStateContainer.history,
-        item => {
-          return new ContainerView(
-            {
-              name: new LabelView(item.action, 'history-list__item__name'),
-              time: new LabelView(item.time.toLocaleTimeString(), 'history-list__item__time')
-            },
-            'history-list__item'
-          )
-        },
-        'history-list'
-      ),
       controls: new ContainerView(
         {
           undoButton: this.undoButton
         }
-      )
+      ),
+      historyWrapper: new ContainerView({
+        historyItemsList: new ListView<GameStateHistoryItem>(
+          this.gameStateContainer.history,
+          item => {
+            return new ContainerView(
+              {
+                name: new LabelView(item.action, 'history-list__item__name'),
+                time: new LabelView(item.time.toLocaleTimeString(), 'history-list__item__time')
+              },
+              'history-list__item'
+            )
+          },
+          'history-list',
+          list => [...list].reverse()
+        )
+      }, 'history-wrapper')
     }
   )
 

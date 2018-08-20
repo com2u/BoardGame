@@ -6,7 +6,8 @@ export class ListView<ListItem> implements View {
   constructor(
     private array: ReadonlyObservableArray<ListItem>,
     private itemRenderer: (item: ListItem) => View,
-    private className: string | null = null
+    private className: string | null = null,
+    private listTransformer?: (list: ReadonlyArray<ListItem>) => ListItem[]
   ) {
     array.itemAdded.subscribe(() => this.redraw())
     array.itemRemoved.subscribe(() => this.redraw())
@@ -15,7 +16,13 @@ export class ListView<ListItem> implements View {
 
   private redraw() {
     this.destroy()
-    this.array.items.forEach(item => {
+    let items = this.array.items
+
+    if (this.listTransformer != null) {
+      items = this.listTransformer(items)
+    }
+
+    items.forEach(item => {
       const view = this.itemRenderer(item)
       this.container.appendChild(view.element)
       this.renderedViews.push(view)

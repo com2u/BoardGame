@@ -4,12 +4,14 @@ import { createElement } from '../HTMLHelpers/CreateElement';
 export class SlotView<Content extends View> implements View {
   constructor(
     private className: string | null = null,
-    private currentContent: Content | null
+    currentContent: Content | null
   ) {
-
+    this.content = currentContent
   }
 
-  public set content(content: Content) {
+  private currentContent: Content | null = null
+
+  public set content(content: Content | null) {
     this.destroyContent()
     this.currentContent = content
 
@@ -18,6 +20,10 @@ export class SlotView<Content extends View> implements View {
     }
 
     this.root.appendChild(content.element)
+  }
+
+  public get content() {
+    return this.currentContent
   }
 
   private destroyContent() {

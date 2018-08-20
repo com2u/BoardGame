@@ -1,6 +1,6 @@
 export function createElement<K extends keyof HTMLElementTagNameMap>(
   name: K,
-  classes?: (string | null)[],
+  classes?: (string | null | undefined)[],
   style?: Partial<CSSStyleDeclaration>,
   attributes?: { [name: string]: string }
 ) {

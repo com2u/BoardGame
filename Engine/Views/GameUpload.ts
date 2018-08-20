@@ -28,7 +28,6 @@ export class GameUploadView implements View {
     const boardImage = form.boardImage.input.value
     const componentsSpriteSheet = form.componentsSpriteSheet.input.value
     const gameConfig = form.gameConfig.input.value
-
     if (boardImage != null && componentsSpriteSheet != null && gameConfig != null && name != null) {
       Promise
         .all([
@@ -42,14 +41,14 @@ export class GameUploadView implements View {
             componentsSpriteSheetURL,
             config: parseGameJSON(config)
           }
-          this.container.content.form.content.footer.content.submit.element.disabled = false
+          this.submitButton.element.disabled = false
         })
         .catch(() => {
           this.gameDefinition = null
-          this.container.content.form.content.footer.content.submit.element.disabled = true
+          this.submitButton.element.disabled = true
         })
     } else {
-      this.container.content.form.content.footer.content.submit.element.disabled = true
+      this.submitButton.element.disabled = true
     }
   }
 
@@ -70,7 +69,7 @@ export class GameUploadView implements View {
 
   private container = new ContainerView(
     {
-      header: new LabelView('Upload game files', 'game-upload-view__header'),
+      // header: new LabelView('Upload game files', 'game-upload-view__header'),
       form: new ContainerView(
         {
           name: new InputField(
@@ -85,7 +84,7 @@ export class GameUploadView implements View {
           ),
           boardImage:
             new InputField(
-              'boardImage',
+              'Board Image',
               new FileInputView(
                 this.handleFormUpdate,
                 imageExtensions
@@ -93,7 +92,7 @@ export class GameUploadView implements View {
             ),
           componentsSpriteSheet:
             new InputField(
-              'componentsSpriteSheet',
+              'Components Sprite Sheet',
               new FileInputView(
                 this.handleFormUpdate,
                 imageExtensions
@@ -101,7 +100,7 @@ export class GameUploadView implements View {
             ),
           gameConfig:
             new InputField(
-              'gameConfig',
+              'Game Config',
               new FileInputView(
                 this.handleFormUpdate,
                 '.json'
@@ -109,10 +108,12 @@ export class GameUploadView implements View {
             ),
           footer: new ContainerView({
             errors: new LabelView('', 'game-upload-view__errors'),
-            submit: new ButtonView(
-              'submit',
-              this.handleSubmit
-            )
+            submit: new ContainerView({
+              button: new ButtonView(
+                'Submit',
+                this.handleSubmit
+              )
+            })
           }, 'game-upload-view__footer')
         },
         'game-upload-view__form'
@@ -120,6 +121,8 @@ export class GameUploadView implements View {
     },
     'game-upload-view'
   )
+
+  private submitButton = this.container.content.form.content.footer.content.submit.content.button
 
   public get element() {
     return this.container.element

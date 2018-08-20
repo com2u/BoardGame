@@ -2,7 +2,7 @@ import { View } from './View'
 import { createElement } from '../HTMLHelpers/CreateElement';
 
 export class FileInputView implements View {
-  constructor (
+  constructor(
     private onInput: (file: File | null) => void,
     private extensions: string,
     private className: string | null = null
